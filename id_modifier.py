@@ -1,3 +1,4 @@
+##This small code takes a file with cells separated by tabs. The value of a particular cell can be modified and printed out.
 import os, sys, re
 
 original_file=open("all_hmm_out.speci.txt", "r")
