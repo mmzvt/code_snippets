@@ -1,0 +1,14 @@
+I have found very similar posts but I can't quite get my regular expression right here.
+
+I am trying to write a regular expression which returns a string which is between two other strings. For example: I want to get the string which resides between the strings "cow" and "milk"
+
+My cow always gives milk
+
+would return
+
+"always gives"
+
+Here is the expression I have pieced together so far:
+
+(?=cow).*(?=milk)
+However this returns the string "cow always gives"
