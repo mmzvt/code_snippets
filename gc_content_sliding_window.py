@@ -1,3 +1,4 @@
+# This script will take a fasta file (with only one fasta sequence, at this moment) and output a file with the GC content of specified sliding window size. Input the fasta file name and the window size as arguments at command line.
 import sys, os
 from Bio import SeqIO
 from Bio.SeqUtils import GC
