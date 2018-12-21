@@ -5,7 +5,15 @@
 import sys, os, re
 from Bio import SeqIO
 
+# guide file looks like this:
+# abbr1	AXXXXXX.1
+# abbr2 ABXXTTR.1 etc.
 guide=open("VLTF3_ref_abbr_names", "r")
+
+#fasta file:
+#>AXXXXX.1
+#atgctatctcccc  etc.
+
 fasta_file=open("VLTF3_ref_candidate_combined.faa", "r")
 
 
