@@ -1,0 +1,8 @@
+#fastq-dump with split-files might sometime fail when fastq files are very large. The files can be 'prefetched' and then converted to two spots.
+#locally. For this, we can use the following script - given a lit of sra run accession, it will generate a bash script for prefetching and splitting the files.
+import os, sys
+
+inputfile = open(sys.argv[1], "r")
+for i in inputfile.readlines():
+	line = i.rstrip()
+	sys.stdout.write("prefetch --max-size 50000000 "+ line +"; fastq-dump --split-e "+ line +"/"+ line +".sra; rm -r "+line +"\n" )
